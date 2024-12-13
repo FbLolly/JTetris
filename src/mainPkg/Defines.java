@@ -10,7 +10,7 @@ public class Defines {
 	public static int FPS = 60;
 	public static int waiting = FPS;
 
-	public static final int tileSize = 24;
+	public static final int tileSize = 32;
 
 	public static final int gridX = 10; //with a 1920x1080 screen this works perfectly
 	public static final int gridY = 20; //with a 1920x1080 screen this works perfectly

@@ -11,9 +11,7 @@ import java.io.InputStream;
 
 import javax.swing.JPanel;
 
-import gamePkg.Block;
 import gamePkg.Game;
-import gamePkg.Grid;
 import menuPkg.Menu;
 import utilsPkg.KeyHandler;
 import utilsPkg.Mouse;

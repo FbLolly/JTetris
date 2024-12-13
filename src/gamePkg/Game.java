@@ -29,10 +29,11 @@ public class Game {
             this.score += 1;
         }
 
-        if (this.block.handleGameOver(grid)){
+        if (this.block.handleGameOver(grid) || keyHandler.pressedEscape){
             grid = new Grid();
             block = new Block();
             this.score = 0;
+            keyHandler.pressedEscape = false;
 
             return true;
         }
