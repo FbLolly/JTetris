@@ -17,13 +17,18 @@ public class Mouse implements MouseListener{
     }
 
     public void updateMousePos(JPanel panel){
-        Point help = MouseInfo.getPointerInfo().getLocation();
+        try{
+            Point help = MouseInfo.getPointerInfo().getLocation();
 
-        help.x -= panel.getLocationOnScreen().x;
-        help.y -= panel.getLocationOnScreen().y;
+            help.x -= panel.getLocationOnScreen().x;
+            help.y -= panel.getLocationOnScreen().y;
 
-        this.x = help.x;
-        this.y = help.y;
+            this.x = help.x;
+            this.y = help.y;
+        }catch(Exception e){
+            this.x = 0;
+            this.y = 0;
+        }
     }
 
     @Override
