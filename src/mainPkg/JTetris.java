@@ -29,6 +29,8 @@ public class JTetris extends JPanel implements Runnable{
 
 	private Menu menu;
 	private Mouse mouse;
+
+	private String osName;
 	
 	public JTetris() {
 		this.keyHandler = new KeyHandler();
@@ -55,6 +57,8 @@ public class JTetris extends JPanel implements Runnable{
 		this.addMouseListener(mouse);
 		this.setFocusable(true);
 		this.setVisible(true);
+
+		this.osName = System.getProperty("os.name");
 		
 		this.startGame();
 	}
@@ -96,7 +100,7 @@ public class JTetris extends JPanel implements Runnable{
         	update();
     		repaint();
     		
-			if (!System.getProperty("os.name").substring(0, 7).equals("Windows")){
+			if (!(this.osName.length() > 7 && this.osName.substring(0, 7).equals("windows"))){
 				Toolkit.getDefaultToolkit().sync();
 			}
 			
