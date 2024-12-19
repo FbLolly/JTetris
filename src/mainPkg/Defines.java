@@ -30,191 +30,191 @@ public class Defines {
 	public static final String[] buttonText = {"Play", "Quit"};
 	public static final Color rosePurple = new Color(186, 85, 211);
 
-	public static Color[] colors = {Color.cyan, Color.blue, Color.orange, Color.yellow, Color.green, Color.pink, Color.red};
+	public static Color[] colors = {Color.cyan, Color.blue, Color.orange, Color.yellow, Color.green, rosePurple, Color.red};
 
-	public static int[][][][] pieces = {
+	public static boolean[][][][] pieces = {
 		{
 			{
-				{0, 0, 0, 0},
-				{1, 1, 1, 1},
-				{0, 0, 0, 0},
-				{0, 0, 0, 0}
+				{false, false, false, false},
+				{true, true, true, true},
+				{false, false, false, false},
+				{false, false, false, false}
 			},
 			{
-				{0, 0, 1, 0},
-				{0, 0, 1, 0},
-				{0, 0, 1, 0},
-				{0, 0, 1, 0}
+				{false, false, true, false},
+				{false, false, true, false},
+				{false, false, true, false},
+				{false, false, true, false}
 			},
 			{
-				{0, 0, 0, 0},
-				{1, 1, 1, 1},
-				{0, 0, 0, 0},
-				{0, 0, 0, 0}
+				{false, false, false, false},
+				{true, true, true, true},
+				{false, false, false, false},
+				{false, false, false, false}
 			},
 			{
-				{0, 0, 1, 0},
-				{0, 0, 1, 0},
-				{0, 0, 1, 0},
-				{0, 0, 1, 0}
+				{false, false, true, false},
+				{false, false, true, false},
+				{false, false, true, false},
+				{false, false, true, false}
 			}
 		},
 		{
 			{
-				{0, 0, 0, 0},
-				{1, 1, 1, 0},
-				{0, 1, 0, 0},
-				{0, 0, 0, 0}
+				{false, false, false, false},
+				{true, true, true, false},
+				{false, true, false, false},
+				{false, false, false, false}
 			},
 			{
-				{0, 1, 0, 0},
-				{1, 1, 0, 0},
-				{0, 1, 0, 0},
-				{0, 0, 0, 0}
+				{false, true, false, false},
+				{true, true, false, false},
+				{false, true, false, false},
+				{false, false, false, false}
 			},
 			{
-				{0, 1, 0, 0},
-				{1, 1, 1, 0},
-				{0, 0, 0, 0},
-				{0, 0, 0, 0}
+				{false, true, false, false},
+				{true, true, true, false},
+				{false, false, false, false},
+				{false, false, false, false}
 			},
 			{
-				{0, 1, 0, 0},
-				{0, 1, 1, 0},
-				{0, 1, 0, 0},
-				{0, 0, 0, 0}
+				{false, true, false, false},
+				{false, true, true, false},
+				{false, true, false, false},
+				{false, false, false, false}
 			}
 		},
 		{
 			{
-				{0, 0, 0, 0},
-				{0, 1, 1, 0},
-				{0, 1, 1, 0},
-				{0, 0, 0, 0}
+				{false, false, false, false},
+				{false, true, true, false},
+				{false, true, true, false},
+				{false, false, false, false}
 			},
 			{
-				{0, 0, 0, 0},
-				{0, 1, 1, 0},
-				{0, 1, 1, 0},
-				{0, 0, 0, 0}
+				{false, false, false, false},
+				{false, true, true, false},
+				{false, true, true, false},
+				{false, false, false, false}
 			},
 			{
-				{0, 0, 0, 0},
-				{0, 1, 1, 0},
-				{0, 1, 1, 0},
-				{0, 0, 0, 0}
+				{false, false, false, false},
+				{false, true, true, false},
+				{false, true, true, false},
+				{false, false, false, false}
 			},
 			{
-				{0, 0, 0, 0},
-				{0, 1, 1, 0},
-				{0, 1, 1, 0},
-				{0, 0, 0, 0}
+				{false, false, false, false},
+				{false, true, true, false},
+				{false, true, true, false},
+				{false, false, false, false}
 			}
 		},
 		{
 			{
-				{0, 0, 0, 0},
-				{0, 0, 1, 1},
-				{0, 1, 1, 0},
-				{0, 0, 0, 0}
+				{false, false, false, false},
+				{false, false, true, true},
+				{false, true, true, false},
+				{false, false, false, false}
 			},
 			{
-				{0, 0, 1, 0},
-				{0, 0, 1, 1},
-				{0, 0, 0, 1},
-				{0, 0, 0, 0}
+				{false, false, true, false},
+				{false, false, true, true},
+				{false, false, false, true},
+				{false, false, false, false}
 			},
 			{
-				{0, 0, 0, 0},
-				{0, 0, 1, 1},
-				{0, 1, 1, 0},
-				{0, 0, 0, 0}
+				{false, false, false, false},
+				{false, false, true, true},
+				{false, true, true, false},
+				{false, false, false, false}
 			},
 			{
-				{0, 0, 1, 0},
-				{0, 0, 1, 1},
-				{0, 0, 0, 1},
-				{0, 0, 0, 0}
+				{false, false, true, false},
+				{false, false, true, true},
+				{false, false, false, true},
+				{false, false, false, false}
 			}
 		},
 		{
 			{
-				{0, 0, 0, 0},
-				{0, 1, 1, 0},
-				{0, 0, 1, 1},
-				{0, 0, 0, 0}
+				{false, false, false, false},
+				{false, true, true, false},
+				{false, false, true, true},
+				{false, false, false, false}
 			},
 			{
-				{0, 0, 0, 1},
-				{0, 0, 1, 1},
-				{0, 0, 1, 0},
-				{0, 0, 0, 0}
+				{false, false, false, true},
+				{false, false, true, true},
+				{false, false, true, false},
+				{false, false, false, false}
 			},
 			{
-				{0, 0, 0, 0},
-				{0, 1, 1, 0},
-				{0, 0, 1, 1},
-				{0, 0, 0, 0}
+				{false, false, false, false},
+				{false, true, true, false},
+				{false, false, true, true},
+				{false, false, false, false}
 			},
 			{
-				{0, 0, 0, 1},
-				{0, 0, 1, 1},
-				{0, 0, 1, 0},
-				{0, 0, 0, 0}
+				{false, false, false, true},
+				{false, false, true, true},
+				{false, false, true, false},
+				{false, false, false, false}
 			}
 		},
 		{
 			{
-				{0, 0, 0, 0},
-				{0, 1, 1, 1},
-				{0, 1, 0, 0},
-				{0, 0, 0, 0}
+				{false, false, false, false},
+				{false, true, true, true},
+				{false, true, false, false},
+				{false, false, false, false}
 			},
 			{
-				{0, 1, 1, 0},
-				{0, 0, 1, 0},
-				{0, 0, 1, 0},
-				{0, 0, 0, 0}
+				{false, true, true, false},
+				{false, false, true, false},
+				{false, false, true, false},
+				{false, false, false, false}
 			},
 			{
-				{0, 0, 0, 1},
-				{0, 1, 1, 1},
-				{0, 0, 0, 0},
-				{0, 0, 0, 0}
+				{false, false, false, true},
+				{false, true, true, true},
+				{false, false, false, false},
+				{false, false, false, false}
 			},
 			{
-				{0, 0, 1, 0},
-				{0, 0, 1, 0},
-				{0, 0, 1, 1},
-				{0, 0, 0, 0}
+				{false, false, true, false},
+				{false, false, true, false},
+				{false, false, true, true},
+				{false, false, false, false}
 			}
 		},
 		{
 			{
-				{0, 0, 0, 0},
-				{0, 1, 1, 1},
-				{0, 0, 0, 1},
-				{0, 0, 0, 0}
+				{false, false, false, false},
+				{false, true, true, true},
+				{false, false, false, true},
+				{false, false, false, false}
 			},
 			{
-				{0, 0, 1, 0},
-				{0, 0, 1, 0},
-				{0, 1, 1, 0},
-				{0, 0, 0, 0}
+				{false, false, true, false},
+				{false, false, true, false},
+				{false, true, true, false},
+				{false, false, false, false}
 			},
 			{
-				{0, 1, 0, 0},
-				{0, 1, 1, 1},
-				{0, 0, 0, 0},
-				{0, 0, 0, 0}
+				{false, true, false, false},
+				{false, true, true, true},
+				{false, false, false, false},
+				{false, false, false, false}
 			},
 			{
-				{0, 0, 1, 1},
-				{0, 0, 1, 0},
-				{0, 0, 1, 0},
-				{0, 0, 0, 0}
+				{false, false, true, true},
+				{false, false, true, false},
+				{false, false, true, false},
+				{false, false, false, false}
 			}
 		}
 	};
 }
-//Copyright 2024 FbLolly
+//Copyright 2false24 FbLolly

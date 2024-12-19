@@ -25,9 +25,7 @@ public class Block {
             for (int ii = 0; ii < Defines.size; ii++){
                 block[i][ii] = new Tile(Defines.gridX/2-Defines.size/2+i, ii, this.color);
 
-                if (Defines.pieces[this.type][0][i][ii] == 1){
-                    block[i][ii].full = true;
-                }
+                block[i][ii].full = Defines.pieces[this.type][0][i][ii];
             }
         }
     }
@@ -83,14 +81,14 @@ public class Block {
             newRotation = 0;
         }
 
-        int current;
+        boolean current;
         int starti = this.block[0][0].getI(), startii = this.block[0][0].getII();
 
         for (int i = 0; i < Defines.size; i++){
             for (int ii = 0; ii < Defines.size; ii++){
                 current = Defines.pieces[this.type][newRotation][i][ii];
 
-                if (current == 0){
+                if (!current){
                     continue;
                 }
 
@@ -124,7 +122,7 @@ public class Block {
             for (int ii = 0; ii < Defines.size; ii++){
                 this.block[i][ii].full = false;
 
-                if (Defines.pieces[this.type][this.rotation][i][ii] == 1){
+                if (Defines.pieces[this.type][this.rotation][i][ii]){
                     this.block[i][ii].full = true;
                 }
             }
