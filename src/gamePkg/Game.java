@@ -23,10 +23,23 @@ public class Game {
         this.score = 0;
     }
 
+    public void hardDrop(long timer){
+        while (!this.block.unTimedUnMovableTick(grid)){ //keeps pushing the block down
+        }
+    }
+
     public boolean tick(long timer, KeyHandler keyHandler){ //im passing menu to reset it on gameover
-        if (this.block.tick(timer, grid, keyHandler)){
+        if (keyHandler.hardDrop){
+            this.hardDrop(timer);
+
+            keyHandler.hardDrop = false;
             this.block = new Block();
             this.score += 1;
+        }else{
+            if (this.block.tick(timer, grid, keyHandler)){
+                this.block = new Block();
+                this.score += 1;
+            }
         }
 
         if (this.block.handleGameOver(grid) || keyHandler.pressedEscape){
@@ -46,9 +59,7 @@ public class Game {
         this.grid.paintComponent(g);
 		this.block.paintComponent(g);
 
-		((Graphics2D) g).setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
-
-        
+		((Graphics2D) g).setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_ON);        
         String text = ""+this.score;
 
 		FontMetrics metrics = g.getFontMetrics(g.getFont());

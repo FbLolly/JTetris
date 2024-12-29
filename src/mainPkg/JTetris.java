@@ -116,7 +116,7 @@ public class JTetris extends JPanel implements Runnable{
 			System.exit(0);
 		}else{
 			this.keyHandler.handleKeys(this);
-
+			
 			if (game.tick(this.timer, this.keyHandler)){
 				this.menu = new Menu();
 			}

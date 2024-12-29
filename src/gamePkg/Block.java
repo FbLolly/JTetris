@@ -170,6 +170,15 @@ public class Block {
         }
     }
 
+    public boolean unTimedUnMovableTick(Grid grid){
+        if (this.isTouchingDown(grid)){
+            return true;
+        }
+
+        this.shiftDown();
+        return false;
+    }
+
     public boolean tick(long timer, Grid grid, KeyHandler kh){
         this.handleRotation(kh, grid);
         this.handleMovement(kh, grid);

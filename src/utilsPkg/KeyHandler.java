@@ -12,30 +12,12 @@ public class KeyHandler {
 	public boolean pressedEscape;
 	public int direction; // -1 = left, 0 = nothing, 1 = male
 	public boolean rotating; // 1 = rotating, 0 = not rotating
-	
-	private PressedEsc pe;
-
-	private PressedW pw;
-	private PressedD pd;
-	private PressedS ps;
-	private PressedA pa;
-
-	private ReleasedS rs;
-	
+	public boolean hardDrop;
 	
 	public KeyHandler() {
 		this.pressedEscape = false;
 		this.direction = 0;
 		this.rotating = false;
-		
-		pe = new PressedEsc();
-		
-		pw = new PressedW();
-		pd = new PressedD();
-		ps = new PressedS();
-		pa = new PressedA();
-
-		rs = new ReleasedS();
 	}
 	
 	public void handleKeys(JTetris jtetris) {
@@ -52,15 +34,18 @@ public class KeyHandler {
 		jtetris.getInputMap(Defines.IFW).put(KeyStroke.getKeyStroke("DOWN"), "s");
 		jtetris.getInputMap(Defines.IFW).put(KeyStroke.getKeyStroke("LEFT"), "a");
 
+		jtetris.getInputMap(Defines.IFW).put(KeyStroke.getKeyStroke("SPACE"), "space");
+
 		jtetris.getInputMap(Defines.IFW).put(KeyStroke.getKeyStroke("released S"), "released_s");
 		jtetris.getInputMap(Defines.IFW).put(KeyStroke.getKeyStroke("released DOWN"), "released_s");
 		
-		jtetris.getActionMap().put("escape", pe);
-		jtetris.getActionMap().put("w", pw);
-		jtetris.getActionMap().put("d", pd);
-		jtetris.getActionMap().put("s", ps);
-		jtetris.getActionMap().put("released_s", rs);
-		jtetris.getActionMap().put("a", pa);
+		jtetris.getActionMap().put("escape", new PressedEsc());
+		jtetris.getActionMap().put("w", new PressedW());
+		jtetris.getActionMap().put("d", new PressedD());
+		jtetris.getActionMap().put("s", new PressedS());
+		jtetris.getActionMap().put("released_s", new ReleasedS());
+		jtetris.getActionMap().put("a", new PressedA());
+		jtetris.getActionMap().put("space", new PressedSpace());
 	}
 	
 	public class PressedEsc extends AbstractAction{
@@ -103,6 +88,13 @@ public class KeyHandler {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			direction = -1;
+		}
+	}
+
+	public class PressedSpace extends AbstractAction{
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			hardDrop = true;
 		}
 	}
 }
